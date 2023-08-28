@@ -1,28 +1,24 @@
 {% extends "main/base.html" %}
-{% load static %} 
-{% block title %} 
-Login 
-{% endblock title %} 
+{% load static %}
+{% block title %}
+Login
+{% endblock title %}
 {% block head %}
 
 <style>
   .gradient-custom {
     background: #6a11cb;
-    background: -webkit-linear-gradient(
-      to right,
-      rgba(106, 17, 203, 1),
-      rgba(37, 117, 252, 1)
-    );
-    background: linear-gradient(
-      to right,
-      rgba(106, 17, 203, 1),
-      rgba(37, 117, 252, 1)
-    );
+    background: -webkit-linear-gradient(to right,
+        rgba(106, 17, 203, 1),
+        rgba(37, 117, 252, 1));
+    background: linear-gradient(to right,
+        rgba(106, 17, 203, 1),
+        rgba(37, 117, 252, 1));
   }
 </style>
 
-{% endblock head %} 
-{% block content %} 
+{% endblock head %}
+{% block content %}
 
 <section class="vh-100 gradient-custom">
   <div class="container h-100">
@@ -31,7 +27,7 @@ Login
         <div class="card bg-dark text-white" style="border-radius: 1rem">
           <div class="card-body p-5 text-center">
             <div class="mb-md-5 mt-md-4 pb-3">
-              <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+              <h2 class="fw-bold mb-2 text-uppercase">Uni X</h2>
               <p class="text-white-50 mb-5">
                 Please enter your login credentials!
               </p>
@@ -39,23 +35,14 @@ Login
               <form action="{%url 'login'%}" method="POST">
                 {% csrf_token%}
                 <div class="form-outline form-white mb-4">
-                  <input
-                    type="email"
-                    id="typeEmailX"
-                    name="email" value="{{data.email}}" placeholder="Email"
-                    class="form-control form-control-lg"
-                  />
+                  <input type="email" id="typeEmailX" name="email" value="{{data.email}}" placeholder="Email"
+                    class="form-control form-control-lg" />
                   <label class="form-label" for="typeEmailX">Email</label>
                 </div>
 
                 <div class="form-outline form-white mb-4">
-                  <input
-                    type="password"
-                    name="password"
-                    placeholder="Password"
-                    id="typePasswordX"
-                    class="form-control form-control-lg"
-                  />
+                  <input type="password" name="password" placeholder="Password" id="typePasswordX"
+                    class="form-control form-control-lg" />
                   <label class="form-label" for="typePasswordX">Password</label>
                 </div>
 
