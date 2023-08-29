@@ -269,7 +269,7 @@ def delete_student(request, id):
     return HttpResponseRedirect(reverse(students))
 
 
-# to get attendance report according to filters for all students
+#to get attendance report according to filters for all students
 def attendance(request):
     attendance_list = Attendance.objects.all().exclude(date__week_day__in=[1])
     filter = AttendanceFilter(request.GET, queryset=attendance_list)

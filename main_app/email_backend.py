@@ -1,5 +1,5 @@
 """
-To override default django behaviour of using username for login credential.
+To override default django behaviour of using username for login credential. c
 """
 
 from django.contrib.auth.backends import ModelBackend

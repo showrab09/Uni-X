@@ -1,5 +1,5 @@
 """
-Useful filter created for filtering data across application.
+Useful filter created for filtering data across application .
 """
 
 from django import forms
